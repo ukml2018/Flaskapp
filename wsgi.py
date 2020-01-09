@@ -5,7 +5,8 @@ import pymysql
 import os
 
 import yaml
-app = Flask(__name__)
+#app = Flask(__name__)
+application = Flask(__name__)
 GOOGLE_SPEECH_API_KEY = None
 #config Db
 #db =yaml.load(open('db.yaml'))
@@ -24,7 +25,8 @@ connectionObject = pymysql.connect(host=dbServerName, user=dbUser, password=dbPa
                                    db=dbName, charset=charSet, cursorclass=cusrorType)
 
 
-@app.route('/', methods=['GET', 'POST'])
+#@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def find():
     print(os.path)
     if request.method == 'POST':
@@ -48,7 +50,8 @@ def find():
     return render_template('index1.html')
 
 
-@app.route('/users')
+#@app.route('/users')
+@application.route('/users')
 def users():
     #cur = mysql.connection.cursor()
     cur = connectionObject.cursor()
@@ -66,7 +69,8 @@ def users():
 
 
 
-@app.route('/mic', methods=["GET", "POST"] )
+#@app.route('/mic', methods=["GET", "POST"] )
+@application.route('/mic', methods=["GET", "POST"] )
 def mic():
     extra_line = ''
 
@@ -121,4 +125,4 @@ def mic():
 
 
 if __name__ =='__main__':
-    app.run()
+    application.run(debug = True)
