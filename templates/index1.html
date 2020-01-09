@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+div {
+    text-align:center;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>Red-Hawks.com</h1>
+<hr>
+<img src="https://vinylbannersprinting.co.uk/wp-content/uploads/2016/04/sb25-RA-demo.png">
+  <hr>
+<h2>PRODUCT</h2>
+  <hr>
+<form method="POST" action="">
+Search : <input type="text" id='speechText' name="name"/>
+<input type='button' id='start' value='Record' onclick='startRecording();'>
+<input type="submit">
+  <hr>
+</form>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('Reflex-Jacket')"> Reflex-Jacket</button>
+  <button class="btn" onclick="filterSelection('MLANM-Fashion T-Shirt')"> MLANM-Fashion T-Shirt</button>
+  <button class="btn" onclick="filterSelection('Gildan-T-Shirt Multipack')"> Gildan-T-Shirt Multipack</button>
+  <button class="btn" onclick="filterSelection('IWOLLENCE-Tops Loose')"> IWOLLENCE-Tops Loose</button>
+  <button class="btn" onclick="filterSelection('Workforce-Lab Coat')"> Workforce-Lab Coat</button>
+  <button class="btn" onclick="filterSelection('MUSHARE-Women Formal')"> MUSHARE-Women Formal</button>
+  <button class="btn" onclick="filterSelection('REACTION Kenneth Cole-Blazer')"> REACTION Kenneth Cole-Blazer</button>
+
+</div>
+ <hr>
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column Reflex-Jacket">
+    <div class="content">
+      <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1001" alt="Mountains" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column Reflex-Jacket">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1002" alt="Lights" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column Reflex-Jacket">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/1003" alt="Nature" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column Reflex-Jacket">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2001" alt="Nature" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column Reflex-Jacket">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2002" alt="Nature" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column Reflex-Jacket">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/2003" alt="Nature" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column MLANM-Fashion T-Shirt">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3001" alt="Nature" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column MLANM-Fashion T-Shirt">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3002" alt="Nature" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column MLANM-Fashion T-Shirt">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/3003" alt="Nature" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+
+  <div class="column Gildan-T-Shirt Multipack">
+    <div class="content">
+      <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4001" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column Gildan-T-Shirt Multipack">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4002" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+
+  <div class="column Gildan-T-Shirt Multipack">
+    <div class="content">
+      <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/4003" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column IWOLLENCE-Tops Loose">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5001" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column IWOLLENCE-Tops Loose">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5006" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+   <div class="column IWOLLENCE-Tops Loose">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/5011" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column Workforce-Lab Coat">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/6001" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column PAUL JONES -Waistcoat">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7001" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column PAUL JONES -Waistcoat">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7006" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column PAUL JONES -Waistcoat">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/7011" alt="Car" style="width:75%">
+      <h4>Fast</h4>
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column MUSHARE-Women Formal">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8001" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column MUSHARE-Women Formal">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8006" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+  <div class="column MUSHARE-Women Formal">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/8011" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+    <div class="column REACTION Kenneth Cole-Blazer">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9001" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+   </div>
+    <div class="column REACTION Kenneth Cole-Blazer">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9006" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+      <div class="column REACTION Kenneth Cole-Blazer">
+    <div class="content">
+    <img src="http://getproductimage-red-hawk.gamification-d3c0cb24e2b77f6869027abe3de4bca3-0001.sng01.containers.appdomain.cloud/get-image-for-item-id/9011" alt="Car" style="width:75%">
+      <h4>Reflex Womenâ€™s Track Jacket</h4>
+      <p >Size: <b>Large</b>   Color: <b>Black </b> Price: $39.33  </p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<script>
+var recognition = new webkitSpeechRecognition();
+recognition.onresult = function(event) {
+  var saidText = "";
+  for (var i = event.resultIndex; i < event.results.length; i++) {
+    if (event.results[i].isFinal) {
+      saidText = event.results[i][0].transcript;
+    } else {
+      saidText += event.results[i][0].transcript;
+    }
+  }
+  // Update Textbox value
+  document.getElementById('speechText').value = saidText;
+    // Search Posts
+  searchPosts(saidText);
+}
+
+function startRecording(){
+  recognition.start();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title> Red Hawaks E-Commerce Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+</style>
+</head>
+<body>
+    <div class="row">
+    {% for user in userDetails %}
+
+  <div class="column women">
+    <div class="content">
+      <h4>{{user["descp"]}} </h4>
+      <img src={{user["image"]}} alt="Mountains" style="width:50%">
+      <p >Size: <b>{{user["size"]}}</b>   Color: <b>{{user["color"]}}  </b>  Price: <strike>{{user["rprice"]}}</strike> <b>{{user["dis"]}}</b>  </p>
+    </div>
+  </div>
+
+    {% endfor %}
+</div>
+</body>
+</html>
